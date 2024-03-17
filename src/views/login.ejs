@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="error"><% if(locals.data){ %><%= data %><% } %>
+    </div>
+    <div class="container">
+        <div class="left">
+           <h1>India's Favourite Wedding Planning Platform</h1>
+        </div>
+        <div class="right">
+            <h1>Sign in</h1>
+            <div class="data">
+                <i class='bx bxs-user-rectangle'></i>
+                <input type="text" placeholder="Enter Username" id="user1" required>
+            </div>
+            <div class="data">
+                <i class='bx bxs-lock' ></i>
+                <input type="password" placeholder="Enter password" id="pass1" required>
+                <img src="/images/icons/hidden.png" alt="" id="show">
+                <img src="/images/icons/eye.png" alt="" id="hide">
+            </div>
+            <button class="data" id="fake">Sign in</button>
+        </div>
+    </div>
+
+    <form action="/v1/login" method="post">
+        <input type="text" name="username" id="user2" hidden>
+        <input type="text" name="password" id="pass2" hidden>
+        <button id="real" hidden></button>
+    </form>
+
+
+
+
+
+
+
+   
+      <script src="/js/login.js"></script>
+</body>
+</html>

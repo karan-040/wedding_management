@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration or Sign Up form in HTML CSS | CodingLab </title> 
+    <link rel="stylesheet" href="/css/register.css">
+   </head>
+<body>
+  <% if (locals.data) { %>
+    <!-- Display message if it exists -->
+    <div class="error">
+        <%=data %>  
+    </div>
+  <% }  %>
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <form action="/v1/register" method="post">
+        <input type="text" placeholder="Enter your name" class="input-box" name="name"  required>
+        <input type="text" placeholder="Enter your email"  class="input-box" name="email" required>
+        <input type="password" placeholder="Create password" class="input-box" name="password1" required>
+        <input type="password" placeholder="Confirm password" class="input-box" name="password2" required>
+        <button class="input-box button">Register</button>
+      <div class="text">
+        <h3>Already have an account? <a href="/v1/login">Login now</a></h3>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const val = document.querySelector(".error").innerHTML;
+    if(val){
+        document.querySelector(".error").classList.add('show');
+
+        // Hide the error message after 3 seconds
+        setTimeout(() => {
+            document.querySelector(".error").classList.remove('show');
+        }, 3000);
+    }
+  </script>
+</body>
+</html>

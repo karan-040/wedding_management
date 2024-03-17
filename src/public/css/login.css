@@ -1,0 +1,119 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  font-family: "Madimi One";
+  background-color: whitesmoke;
+}
+
+.container{
+  background-color: #ffffff;
+  width: 75%;
+  height: 700px;
+  margin-top: 40px;
+  display: flex;
+  border-radius: 11px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.left{
+  background-image: url("../images/couples/laughing.png");
+  background-size: cover;
+  background-position: center;
+  width: 40%;
+  color: #ffffff;
+  font-size: 20px;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.right{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  align-items: center;
+}
+.data{
+  border: 1px solid black;
+  width: 60%;
+  margin-top: 50px;
+  display:flex;
+  align-items: center;
+}
+.right h1{
+  font-size: 40px;
+  margin-top: 100px;
+}
+.data input{
+  border: none;
+  outline: none;
+  padding:1rem;
+  border-left: 2px solid rgb(247, 231, 231);
+}
+
+.data i{
+  font-size: 40px;
+  margin-right: 5px;
+}
+.data img{
+  position:relative;
+  max-width: 20px;
+  height: auto;
+  right: -30%;
+}
+
+button{
+  padding-left: 24%;
+  width: 100%;
+  border: none;
+  height: 50px;
+  background-color: #54B435;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 300;
+}
+button:active{
+  scale: .9;
+}
+
+#hide{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.error {
+  display: none; 
+  position: fixed;
+  top: 10%;
+  left: 40%;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+.error.show {
+  display: block; /* Show the error message when the 'show' class is applied */
+  opacity: 1; /* Make the error message fully opaque */
+}
